@@ -1,0 +1,75 @@
+body {
+    padding-top: 30px;
+}
+
+h1, h2 {
+    text-align: center;
+    color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+}
+
+input::placeholder {
+    background-color: #fefefe;
+}
+
+.app-header {
+    padding: 20px;
+    text-align: center;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,219,255,1) 100%);
+}
+
+.center-column {
+    width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    box-shadow: 6px 2px 30px rgba(0, 0, 0, .75);
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    background-color: #906abd;
+    margin: 10px;
+    padding: 20px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color: #fff;
+    font-size: 16px;
+    box-shadow: 0px -1px 10px -4px rgba(0, 0, 0, .75);
+}
+
+.actions {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 25px;
+}
+
+.btn:first-child {
+    margin-right: 15px;
+}
+.task-title {
+    margin: 0;
+}
+
+.fa {
+    font-size: 18px;
+    color: #000;
+}

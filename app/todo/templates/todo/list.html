@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="center-column">
+    <div class="app-header">
+        <h1>Список задач</h1>
+    </div>
+        <form method="POST" action="/">
+        {% csrf_token %}
+        {{ form.title }}
+        <input class="btn btn-info" type="submit" name="create_task" value="Добавить задачу">
+    </form>
+
+    <div class="tasks">
+        {% for task in tasks %}
+            <div class="task">
+                <div class="actions">
+                    <a class="btn btm-sm btn-info" href="{% url 'update' task.id %}"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                    <a class="btn btm-sm btn-danger" href="{% url 'delete' task.id %}"><i class="fa fa-times" aria-hidden="true"></i></a>
+                </div>
+
+                {% if task.complete == True %}
+                    <p class="task-title"><strike>{{ task }}</strike></p>
+                {% else %}
+                    <p class="task-title">{{ task }}</p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock content %}
+
